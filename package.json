@@ -1,0 +1,22 @@
+{
+  "name": "ethereum-hello-world",
+  "version": "1.0.0",
+  "description": "Hello World based on ethereum smart contracts",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtw-programmer/ethereum-hello-world.git"
+  },
+  "author": "mtw-programmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtw-programmer/ethereum-hello-world/issues"
+  },
+  "homepage": "https://github.com/mtw-programmer/ethereum-hello-world#readme"
+}
