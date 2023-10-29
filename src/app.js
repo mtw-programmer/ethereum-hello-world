@@ -1,6 +1,8 @@
 App = {
+  contracts: {},
   load: async () => {
     await App.loadAccount();
+    await App.loadContract();
   },
   loadAccount: async () => {
     try {
@@ -11,6 +13,12 @@ App = {
       console.log(ex);
     }
   },
+  loadContract: async () => {
+    const toDoList = await $.getJSON('ToDoList.json');
+    App.contracts.toDoList = TruffleContract(toDoList);
+    App.contracts.toDoList.setProvider(ethereum);
+    App.toDoList = await App.contracts.toDoList.deployed();
+  }
 }
 
 $(window).load(() => App.load());
