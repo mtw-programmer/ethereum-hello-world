@@ -1,2 +1,2 @@
 # ethereum-todo-list
-Hello world application using ethereum smart contracts.
+To do list application using ethereum smart contracts.
