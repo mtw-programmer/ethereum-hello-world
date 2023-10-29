@@ -27,5 +27,8 @@
     "lite-server": "^2.6.1",
     "truffle": "^5.11.5",
     "truffle-contract": "^4.0.31"
+  },
+  "dependencies": {
+    "web3": "^4.2.1"
   }
 }
