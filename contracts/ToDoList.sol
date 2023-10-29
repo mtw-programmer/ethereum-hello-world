@@ -13,7 +13,7 @@ contract ToDoList {
   mapping(uint => Task) public tasks;
 
   constructor () public {
-    createTask('Task no. 1', 'Stop procrastinating ;)');
+    createTask(string(abi.encodePacked('Task no. ', taskCount)), 'Stop procrastinating ;)');
   }
 
   function createTask (string memory _title, string memory _content) public {
