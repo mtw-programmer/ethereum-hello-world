@@ -31,6 +31,13 @@ App = {
 
     App.setLoading(false);
   },
+  createTask: async () => {
+    App.setLoading(true);
+    const content = $('#newTask').val();
+    const taskCount = await App.toDoList.taskCount();
+    await App.toDoList.createTask(`Task no. ${taskCount + 1}`, content, { from: App.account });
+    window.location.reload();
+  },
   renderTasks: async () => {
     const taskCount = await App.toDoList.taskCount();
     const taskTemplate = $('.taskTemplate');
@@ -71,7 +78,7 @@ App = {
       loader.hide();
       content.show();
     }
-  }
+  },
 }
 
 $(window).load(() => App.load());
