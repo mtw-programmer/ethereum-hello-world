@@ -44,7 +44,7 @@ App = {
 
       const newTaskTemplate = taskTemplate.clone();
       
-      newTaskTemplate.find('.title').html(title);
+      newTaskTemplate.find('.title').html(`<b>${title}: </b>`);
       newTaskTemplate.find('.content').html(content);
       newTaskTemplate.find('input')
         .prop('name', id)
