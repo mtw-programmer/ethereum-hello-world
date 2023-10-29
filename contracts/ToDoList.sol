@@ -19,6 +19,11 @@ contract ToDoList {
     bool completed
   );
 
+  event TaskCompleted (
+    uint id,
+    bool completed
+  );
+
   constructor () public {
     createTask('Default Title', 'Stop procrastinating ;)');
   }
@@ -27,5 +32,12 @@ contract ToDoList {
     taskCount++;
     tasks[taskCount] = Task(taskCount, _title, _content, false);
     emit TaskCreated(taskCount, _title, _content, false);
+  }
+
+  function toggleCompleted (uint _id) public {
+    Task memory _task = tasks[_id];
+    _task.completed = !_task.completed;
+    tasks[_id] = _task;
+    emit TaskCompleted(_task.id, _task.completed);
   }
 }
