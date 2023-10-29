@@ -1,8 +1,8 @@
 App = {
   contracts: {},
-  load: async () => {
-    await App.loadAccount();
-    await App.loadContract();
+  load: () => {
+    App.loadAccount();
+    App.loadContract();
   },
   loadAccount: async () => {
     try {
