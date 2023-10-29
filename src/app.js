@@ -41,7 +41,7 @@ App = {
     App.setLoading(true);
     const content = $('#newTask').val();
     const taskCount = await App.toDoList.taskCount();
-    await App.toDoList.createTask(`Task no. ${taskCount + 1}`, content, { from: App.account });
+    await App.toDoList.createTask(`Task no. ${+taskCount + 1}`, content, { from: App.account });
     window.location.reload();
   },
   renderTasks: async () => {
