@@ -27,9 +27,21 @@
         margin-left: 5%;
       }
 
+      #account {
+        position: absolute;
+        right: 1%;
+        top: 1%;
+      }
+
       #newTask {
         width: 300px;
         margin: 5%;
+      }
+
+      @media (max-width: 600px) {
+        #newTask {
+          margin-top: 15%;
+        }
       }
 
       #loader {
@@ -46,6 +58,7 @@
     </style>
   </head>
   <body>
+    <span id="account"></span>
     <div class="container-fluid">
       <div class="row">
         <main role="main" class="col-lg-12 d-flex justify-content-center">
