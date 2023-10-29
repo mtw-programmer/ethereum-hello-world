@@ -20,6 +20,12 @@ App = {
     App.contracts.toDoList.setProvider(ethereum);
     App.toDoList = await App.contracts.toDoList.deployed();
   },
+  toggleCompleted: async (e) => {
+    App.setLoading(true);
+    const taskId = e.target.name;
+    await App.toDoList.toggleCompleted(taskId, { from: App.account });
+    window.location.reload();
+  },
   render: async () => {
     if (App.loading) return;
 
