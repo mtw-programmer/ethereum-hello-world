@@ -1,5 +1,5 @@
 # Ethereum To Do List
-To do list application using ethereum smart contracts.
+To do list application created with solidity smart contracts.
 
 ## set-up
 
